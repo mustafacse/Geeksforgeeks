@@ -37,4 +37,24 @@ public class ListNode {
 		}
 		System.out.println("--------------------------------");
 	}
+	
+	public int getLength(ListNode head)
+	{
+		int length = 0;
+		
+		while(head != null){
+			head = head.getNext();
+			++length;
+		}
+		return length;
+		
+	}
+	
+	public void printReverse(ListNode head)
+	{
+		if(head == null)
+			return;
+		printReverse(head.getNext());
+		System.out.println(head.getData());
+	}
 }
