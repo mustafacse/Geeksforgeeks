@@ -5,6 +5,10 @@ public class ListNode {
 	private int data;
 	private ListNode next;
 	
+	public ListNode(){
+		
+	}
+	
 	public ListNode(int data, ListNode next) {
 		super();
 		this.data = data;
@@ -56,5 +60,18 @@ public class ListNode {
 			return;
 		printReverse(head.getNext());
 		System.out.println(head.getData());
+	}
+	
+	public boolean isIdentical(ListNode head){
+		ListNode curr = this;
+		while(curr != null && head != null){
+			if(curr.getData() != head.getData())
+				return false;
+			head = head.getNext();
+			curr = curr.getNext();
+		}
+		if(curr == null && head == null)
+			return true;
+		return false;
 	}
 }
