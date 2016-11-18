@@ -19,8 +19,19 @@ public class Diameter {
 		int rDiameter = diameter(root.getRight(), rh);
 		
 		h.h = Math.max(lh.h, rh.h)+1;
-		return Math.max(lh.h+rh.h+1,Math.max(lDiameter, rDiameter));
+		int max =  Math.max(lh.h+rh.h+1,Math.max(lDiameter, rDiameter));
 		
+		return max;
+	}
+	
+	
+	public static int getDepth(TreeNode root){
+		if(root == null) return 0;
+		
+		int l = getDepth(root.getLeft());
+		int r = getDepth(root.getRight());
+		
+		return l > r ? l+1 : r+1;
 	}
 	
 	public static boolean isHeightBalanced(TreeNode root,Height ht)
@@ -50,14 +61,15 @@ public class Diameter {
 		root.setRight(new TreeNode(3));
 		root.getLeft().setLeft(new TreeNode(4));
 		root.getLeft().setRight(new TreeNode(5));
-		root.getRight().setLeft(new TreeNode(6));
-		root.getRight().setRight(new TreeNode(7));
+		root.getLeft().getLeft().setLeft(new TreeNode(6));
+		root.getLeft().getRight().setRight(new TreeNode(7));
 		
 		System.out.println(diameter(root,new Height()));
-		if(isHeightBalanced(root,new Height()))
+		/*if(isHeightBalanced(root,new Height()))
 			System.out.println("YES");
 		else
-			System.out.println("NO");
+			System.out.println("NO");*/
+		
 	}
 
 }
