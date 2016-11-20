@@ -14,6 +14,7 @@ public class Graph {
 	private int v;
 	private LinkedList<Integer> arr[];
 	
+	@SuppressWarnings("unchecked")
 	public Graph(int v) {
 		super();
 		this.v = v;
