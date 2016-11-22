@@ -142,5 +142,15 @@ public class TreeNode {
 		return countLeaf(root.getLeft())+countLeaf(root.getRight());
 	}
 	
+	public int getHeight(TreeNode root){
+		
+		if(root == null) 
+			return 0;
+		
+		int left = getHeight(root.getLeft());
+		int right = getHeight(root.getRight());
+		
+		return Math.max(left, right) + 1;
+	}
 	
 }
