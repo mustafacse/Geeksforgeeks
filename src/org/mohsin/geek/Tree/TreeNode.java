@@ -153,4 +153,10 @@ public class TreeNode {
 		return Math.max(left, right) + 1;
 	}
 	
+	public int countNodes(TreeNode root){
+		if(root == null)
+			return 0;
+		return countNodes(root.getLeft())+1+countNodes(root.getRight());
+	}
+	
 }
