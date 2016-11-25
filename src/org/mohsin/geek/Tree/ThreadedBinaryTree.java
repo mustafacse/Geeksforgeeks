@@ -15,6 +15,28 @@ public class ThreadedBinaryTree {
 		threading(root.getLeft());
 	}
 	
+	public static TreeNode leftMost(TreeNode root){
+		TreeNode curr = root;
+		while(curr.getLeft() != null){
+			curr = curr.getLeft();
+		}
+		return curr;
+	}
+	
+	/*public static void inorder(TreeNode root){
+		
+		if(root == null)
+			return;
+		
+		TreeNode curr = leftMost(root);
+		while(curr != null){
+			System.out.println(curr.getData());
+			if(curr.isThreaded == true)
+				curr = curr.getRight();
+			else
+				curr = leftMost(curr.getRight());
+		}
+	}*/
 	public static void main(String[] args) {
 		
 		
