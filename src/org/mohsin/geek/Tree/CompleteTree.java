@@ -12,6 +12,18 @@ import java.util.Queue;
  */
 public class CompleteTree {
 
+	
+	public static boolean recurSolution(TreeNode root,int n,int index){
+		
+		if(root == null)
+			return true;
+		
+		if(index >= n)
+			return false;
+		
+		return recurSolution(root.getLeft(), n, 2*index+1) && recurSolution(root.getRight(), n, 2*index+2);
+	}
+	
 	public static boolean isComplete(TreeNode root){
 		
 		if(root == null){
@@ -57,6 +69,12 @@ public class CompleteTree {
 		root.getRight().setRight(new TreeNode(7));
 		
 		if(isComplete(root))
+			System.out.println("YES");
+		else
+			System.out.println("NO");
+		
+		int n = root.countNodes(root);
+		if(recurSolution(root,n,0))
 			System.out.println("YES");
 		else
 			System.out.println("NO");
