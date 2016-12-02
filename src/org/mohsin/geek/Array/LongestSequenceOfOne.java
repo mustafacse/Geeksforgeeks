@@ -6,6 +6,7 @@ public class LongestSequenceOfOne {
 		
 		int prevZero = -1,prevOfPrevZero = -1;
 		int maxLen = 0;
+		
 		int index = -1;
 		
 		for(int curr = 0;curr < arr.length;++curr)
