@@ -16,7 +16,6 @@ public class SpiralMatrix {
 			
 			for(int i = k;i < row;++i)
 				System.out.print(mat[i][col-1]+" ");
-			
 			--col;
 			
 			if(k < row){
@@ -26,13 +25,13 @@ public class SpiralMatrix {
 			}
 			
 			if(l < col){
-				for(int i = row-1;i >= k;--i){
+				for(int i = row-1;i >= k;--i)
 					System.out.print(mat[i][l]+" ");
-				}
 				++l;
 			}
 		}
 	}
+	
 	public static void main(String[] args) {
 		
 		int a[][] = { {1,  2,  3,  4,  5,  6},
