@@ -1,5 +1,12 @@
 package org.geek.mohsin.interviews.N309;
 
+/**
+ * 
+ * Chikka Tree
+ * 
+ */
+
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -117,7 +124,6 @@ public class F3Q2 {
 			root = constructBst(root,new TNode(arr[i]));
 		}
 		
-		//inorder(root);
 		levelOrder(root);
 	}
 
