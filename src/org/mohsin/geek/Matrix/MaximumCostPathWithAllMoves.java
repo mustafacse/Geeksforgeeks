@@ -16,8 +16,8 @@ class Cell{
 
 public class MaximumCostPathWithAllMoves {
 
-	private static int rowNum[] = {0,-1,0,1};
-	private static int colNum[] = {-1,0,1,0};
+	/*private static int rowNum[] = {0,-1,0,1};
+	private static int colNum[] = {-1,0,1,0};*/
 	
 	public static int maxCost(int grid[][]){
 		
