@@ -1,12 +1,15 @@
 /*
-	APPROACH : 	   Iterate through every element of string array and check in trie whether its a prefix of
-				   any present string or not.
+	APPROACH : 	   Iterate through every element of string array and check whether its a prefix of
+				   any present string or not( in our trie).
 				   Special case : We can have palidrome of even length or odd length. So if the first character doen't match 
-				   we can ignore it and iterate for the next position. 
+				   we can ignore it and iterate for the next position in trie. 
 				   Case 1: If we find this string as a prefix of another string, we will add these two strings and check whether
 				   they are palindrome or not. If they are palindorme, just return true.
 				   Case 2: Otherwise reverse the string and insert into trie.
-				   
+			
+	COMPLEXITY : O(KN)
+					K = Length of longest string
+					N = No of strings
 				   
 */
 package org.mohsin.geek.String;
@@ -166,5 +169,5 @@ public class CheckAnyTwoArePalindromicOrNot {
 		if (flag == false) //if no such pair founds
 			System.out.println("No such pair found");
 	}
-
+	
 }
